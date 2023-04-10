@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><title>Accommodation</title><script src="accommodationsPage.js"></script><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><style>body {
+            padding: 10% 3% 10% 3%;
+            text-align: center;
+        }
+
+        img {
+            height: 600px;
+            width: 600px;
+            scroll-behavior: auto;
+        }
+
+        h1 {
+            color: #32a852;
+        }
+
+        .mode {
+            float: right;
+        }
+
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+
+        .dark {
+            background-color: #222;
+            color: #e6e6e6;
+        }
+
+        button {
+            background-color: #32a852;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            justify-items: center;
+            text-align: center;
+        }</style></head><body class="background"><div class="header"><h1 class="title">NueroDivergent Accomodations</h1></div><div class="container"><div class="mode">Dark mode: <span class="change">OFF</span></div><div><div class="card"><div class="card" id="create-form"><h2 class="card">Click dropdown box accessibility need</h2></div></div></div><div class="dropdown" id="clickListen"><p id="result-info3"></p></div><div class="card" id="result4"><h2>Accommodations for Need</h2><p id="result-info4"></p></div><div class="card"><h2>Get Accessibility Needs By ID</h2><form class="card-content" id="get-by-id-form"><p class="form-field"><label class="card">ID <input required class="validated-field" id="id-field"></label></p><button type="submit">Get</button></form></div><div class="card"><h2>Get All Available Accommodations</h2><form class="card-content" id="get-all-form"><button type="submit">Get All</button></form></div><div class="card" id="result2"><p id="result-info2"></p></div><button onclick="window.location.href = 'request.html'">Request Accommodation</button></div><script>$(".change").on("click", function () {
+        if ($("body").hasClass("dark")) {
+            $("body").removeClass("dark");
+            $(".change").text("OFF");
+        } else {
+            $("body").addClass("dark");
+            $(".change").text("ON");
+        }
+    });</script></body></html>

@@ -1,0 +1,47 @@
+Resources:
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: "/"
+      Policies:
+        - PolicyName: dynamodbAccessRole
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:*
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - logs:*
+                Resource: "*"
+  DynamoDBIndexesAccessibilityAccess:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "Accommodation"
+      AttributeDefinitions:
+        - AttributeName: "accessibilityNeed"
+          AttributeType: "S"
+        - AttributeName: "accommodations"
+          AttributeType: "M"
+        - AttributeName: "accommodationId"
+          AttributeType: "S"
+
+      KeySchema:
+        - AttributeName: "accessibilityNeed"
+          KeyType: "HASH"
+        - AttributeName: "details"
+          KeyType: "RANGE"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      BillingMode: PAY_PER_REQUEST

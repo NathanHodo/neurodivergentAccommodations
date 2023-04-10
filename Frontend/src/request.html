@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="requestPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/request.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body class="background">
+<header class="header" id="header">
+    <div class="site-title">
+        <a class="header_home" href="index.html">NeuroDivergent Accommodations</a>
+    </div>
+</header>
+<div class="card">
+    <h2>Make Request For Accommodations</h2>
+</div>
+<div class="card">
+    <form class="card-content" id="request-accommodation">
+        <p class="form-field">
+            <label>Name</label>
+            <input type="text" required class="validated-field" id="create-accessibility-need-field">
+        </p>
+        <p class="form-field">
+            <label>First Accommodation</label>
+            <label for="acc-select">Choose first accommodation:</label>
+            <select name="accommodationOne" id="acc-select">
+            </select>
+        </p>
+        <p class="form-field">
+            <label>Second Accommodation</label>
+            <label for="acc-select2">Choose second accommodation:</label>
+            <select name="accommodationTwo" id="acc-select2">
+            </select>
+        </p>
+        <button type="submit">Send Request For Accommodation(s)</button>
+    </form>
+</div>
+<div class="card">
+    <h2>All Accommodation Requests For HR</h2>
+    <form class="card-content" id="request-results">
+        <button type="submit">Get All</button>
+        <br>
+        <p id = "result4"></p>
+    </form>
+</div>
+<div class="card">
+        <button type="submit" id = "buttonTest"> Review Accommodations By Accessibility Need </button>
+</div>
+<div class = "card" id = "testing">
+    <div class="card" id="result">
+        <h2>Please click on an accessibility need below to view available accommodations:</h2>
+        <div id="accessibilityNeeds"></div>
+        <br>
+        <div id="accommodations"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+:<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NeuroDivergent Accommodations</title>
+        <script type="text/javascript" src="accommodationsPage.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    </head>
+
+
+    <body class="background">
+    <input class="dark-light" type="checkbox" id="dark-light" name="dark-light"/>
+    <label for="dark-light"></label>
+
+    <div class="light-back"></div>
+
+    <a href="https://kenzie.snhu.edu/" class="logo" target="_blank">
+        <img class="kenzie" src="data:image/png;base64,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" alt="kenzie">
+    </a>
+
+    <div class="sec-center">
+        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+        <label class="for-dropdown" for="dropdown">Accessibility Menu <i class="uil uil-arrow-down"></i></label>
+        <div class="section-dropdown">
+            <a href="#" id="sensory">SENSORY_SENSITIVITY<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="physical">PHYSICAL_ORGANIZATION<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="social">SOCIAL_COMMUNICATION<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="time">TIME_MANAGEMENT<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="task">TASK_ORGANIZATION<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="auditory">AUDITORY_PROCESSING<i class="uil uil-arrow-right"></i></a>
+            <a href="#" id="stress">STRESS_MANAGEMENT<i class="uil uil-arrow-right"></i></a>
+
+        </div>
+
+<!--        <header class="header" id="header">-->
+<!--            <div class="site-title">-->
+<!--                <a class="header_home" href="index.html">NeuroDivergent Accommodations</a>-->
+<!--            </div>-->
+<!--        </header>-->
+<!--        <div class="card">-->
+<!--            <h2>For Testing Purposes</h2>-->
+<!--            <h2>Note that we send an accommodation string that is added and returned as a set</h2>-->
+<!--            <h2>Create Accessibility Need and Accommodation</h2>-->
+<!--            <form class="card-content" id="create-form">-->
+<!--                <p class="form-field">-->
+<!--                    <label>Accessibility Need</label>-->
+<!--                    <input type="text" required class="validated-field" id="create-accessibility-need-field">-->
+<!--                </p>-->
+
+    <section class="return accommodations">
+                <p class="form-field">
+                    <label>Accommodation</label>
+                    <input type="text" required class="validated-field" id="create-accommodation-field">
+                </p>
+
+<!--                <button type="submit">Create</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <h2>Get Accessibility Needs By ID</h2>-->
+<!--            <form class="card-content" id="get-by-id-form">-->
+<!--                <p class="form-field">-->
+<!--                    <label>ID</label>-->
+<!--                    <input type="text" required class="validated-field" id="id-field">-->
+<!--                </p>-->
+<!--                <button type="submit">Get</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <h2>Get All and Display in Display Area 2</h2>-->
+<!--            <form class="card-content" id="get-all-form">-->
+<!--                <button type="submit">Get All</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="card" id="result">-->
+<!--            <h2>Accommodation by id</h2>-->
+<!--            <p id="result-info"></p>-->
+<!--        </div>-->
+<!--        <div class="card" id="result2">-->
+<!--            <h2>All available Accommodations</h2>-->
+<!--            <p id="result-info2"></p>-->
+<!--        </div>-->
+    </section></div>
+    </body>
+</html>
